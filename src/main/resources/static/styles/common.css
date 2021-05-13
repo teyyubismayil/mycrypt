@@ -1,0 +1,118 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+}
+
+header {
+    margin: 30px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.nav {
+    padding: 15px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.logo {
+    width: 100px;
+}
+
+.sign-in {
+    font-size: 20px;
+}
+
+.sign-in:hover {
+    color: #ff6166;
+}
+
+.pink-btn {
+    color: #fff;
+    border-radius: 50px;
+    background-color: #ff6166;
+}
+
+.pink-btn:hover {
+    color: #fff;
+    background-color: #fd494f;
+}
+
+.btn-310 {
+    min-width: 310px;
+}
+
+.btn-180 {
+    min-width: 180px;
+}
+
+.err-msg {
+    color: #ff6166;
+}
+
+footer {
+    padding: 15px 10px;
+    background-color: rgb(244, 244, 244);
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    h1 {
+        font-size: 100px;
+    }
+    h3 {
+        font-size: 70px;
+    }
+    h2 {
+        font-size: 50px;
+    }
+    p {
+        font-size: 40px;
+    }
+    label {
+        font-size: 40px;
+    }
+    header {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .nav {
+        padding: 30px 15px;
+    }
+    .logo {
+        width: 200px;
+    }
+    .btn-310 {
+        min-width: 620px;
+    }
+    .btn-180 {
+        min-width: 360px;
+    }
+    .pink-btn {
+        font-size: 40px;
+    }
+    .sign-in {
+        font-size: 40px;
+    }
+    .err {
+        font-size: 35px;
+    }
+    .main-section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    input {
+        height: 60px;
+    }
+    footer {
+        padding: 25px 15px;
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,25 @@
+.tool {
+    padding: 5px;
+    min-height: 150px;
+}
+
+.tool-body {
+    height: 100%;
+    background: rgb(250, 250, 250);
+    border: 1px solid rgb(232, 232, 232);
+}
+
+.tool-body:hover {
+    background: rgb(232, 232, 232);
+}
+
+.card-grid {
+    padding: 0 1%;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .tool {
+        padding: 5px 10px;
+        min-height: 250px;
+    }
+}

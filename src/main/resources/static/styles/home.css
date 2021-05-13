@@ -1,0 +1,19 @@
+main {
+    padding: 20px;
+}
+
+.home-img {
+    width: 100%;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    main {
+        padding: 40px;
+    }
+    .home-img {
+        margin: 40px 0;
+    }
+    col.p {
+        padding: 15px 0;
+    }
+}

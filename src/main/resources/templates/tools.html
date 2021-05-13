@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <div th:replace="fragments/common :: head"></div>
+    <link rel="stylesheet" th:href="@{/styles/tools.css}">
+</head>
+<body>
+    <nav th:replace="fragments/common :: nav"></nav>
+    <header class="text-center">
+        <h1>All MyScrypt Tools</h1>
+        <p>Make use of our collection of tools to secure your files.</p>
+    </header>
+    <main>
+        <div class="card-grid">
+            <div class="row row-cols-lg-2 row-cols-sm-1">
+                <div class="col tool">
+                    <div class="card tool-body">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h3 class="card-title">File Encryptor</h3>
+                            <p class="card-text">Easily encrypt your file.</p>
+                            <a th:href="@{/tools/fileEncryptor}" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col tool">
+                    <div class="card tool-body">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h3 class="card-title">File Decryptor</h3>
+                            <p class="card-text">Decrypt encrypted file.</p>
+                            <a th:href="@{/tools/fileDecryptor}" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer th:replace="fragments/common :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <div th:replace="fragments/common :: head"></div>
+    <link rel="stylesheet" th:href="@{/styles/fileEncryptor.css}">
+</head>
+<body>
+    <nav th:replace="fragments/common :: nav"></nav>
+    <header class="text-center">
+        <h1>File Encryptor</h1>
+        <p>Encrypt any file so no one can use it</p>
+    </header>
+    <main>
+        <div id="progress">
+            <div id="bar"></div>
+        </div>
+        <section class="main-section d-flex flex-column justify-content-center align-items-center">
+            <div id="fileWindow" class="d-flex justify-content-center align-items-center text-center">
+                <form>
+                    <img class="file-img" th:src="@{/images/file.svg}" alt="file-icon"><br/>
+                    <p class="drop-here">Drop file here or</p>
+                    <label class="btn btn-lg pink-btn btn-310" for="fileInput">CHOOSE FILE<input id="fileInput" type="file" hidden></label>
+                </form>
+            </div>
+            <div id="passwordWindow">
+                <h2>Choose password to protect your file:</h2>
+                <label for="passwordInput" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="passwordInput">
+                <div id="fillErr1" class="err">Please fill out password input field.</div>
+                <label for="passwordConfirm" class="form-label">Confirm password:</label>
+                <input type="password" class="form-control" id="passwordConfirm">
+                <div id="fillErr2" class="err">Please fill out password input field.</div>
+                <div id="sameErr" class="err">Passwords should be same</div>
+                <button id="encryptBtn" class="btn btn-lg pink-btn btn-180">&darr; ENCRYPT</button>
+            </div>
+            <div id="successWindow">
+
+            </div>
+            <div id="errorWindow">
+
+            </div>
+        </section>
+    </main>
+    <footer th:replace="fragments/common :: footer"></footer>
+    <script th:src="@{/scripts/modExp.js}"></script>
+    <script th:src="@{/scripts/alphabet.js}"></script>
+    <script th:src="@{/scripts/encryptor.js}"></script>
+    <script th:src="@{/scripts/fileEncryptor.js}"></script>
+</body>
+</html>

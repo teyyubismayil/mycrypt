@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <div th:replace="fragments/common :: head"></div>
+    <link rel="stylesheet" th:href="@{/styles/fileDecryptor.css}">
+</head>
+<body>
+<nav th:replace="fragments/common :: nav"></nav>
+<header class="text-center">
+    <h1>File Decryptor</h1>
+    <p>Decrypt encrypted file.</p>
+</header>
+<main>
+    <div id="progress">
+        <div id="bar"></div>
+    </div>
+    <section class="main-section d-flex flex-column justify-content-center align-items-center">
+        <div id="fileWindow" class="d-flex justify-content-center align-items-center text-center">
+            <form>
+                <img class="file-img" th:src="@{/images/file.svg}" alt="file-icon"><br/>
+                <p class="drop-here">Drop file here or</p>
+                <label class="btn btn-lg pink-btn btn-310" for="fileInput">CHOOSE FILE<input id="fileInput" type="file" accept=".myscript,.txt" hidden></label>
+            </form>
+        </div>
+        <div id="decryptWindow">
+            <div id="passwordWindow">
+                <h2>Enter password:</h2>
+                <label for="passwordInput" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="passwordInput">
+                <div id="fillErr1" class="err">Please fill out password input field.</div>
+            </div>
+            <button id="decryptBtn" class="btn btn-lg pink-btn btn-180">&darr; DECRYPT</button>
+        </div>
+        <div id="successWindow">
+
+        </div>
+        <div id="errorWindow" class="text-center">
+            <p id="errorMsg" class="err-msg"></p>
+            <button id="againBtn" class="btn btn-lg pink-btn btn-180">TRY AGAIN</button>
+        </div>
+    </section>
+    <script th:src="@{/scripts/modExp.js}"></script>
+    <script th:src="@{/scripts/reverseAlphabet.js}"></script>
+    <script th:src="@{/scripts/decryptor.js}"></script>
+    <script th:src="@{/scripts/fileDecryptor.js}"></script>
+</main>
+<footer th:replace="fragments/common :: footer"></footer>
+</body>
+</html>

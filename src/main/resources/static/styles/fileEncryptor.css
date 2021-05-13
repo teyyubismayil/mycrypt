@@ -1,0 +1,48 @@
+#passwordWindow,
+#errorWindow {
+    display: none;
+}
+
+#fileWindow {
+    height: 100%;
+    width: 100%;
+}
+
+.main-section {
+    background-color: #d6f4fd;
+    margin: 0 1%;
+    min-height: 400px;
+}
+
+#progress {
+    margin: 0 1%;
+    width: 98%;
+    height: 3px;
+}
+
+#bar {
+    height: 100%;
+    width: 0;
+    background-color: #9ddff1;
+}
+
+.file-img {
+    width: 100px;
+}
+
+.drop-here {
+    margin: 10px;
+}
+
+.display-none {
+    display: none!important;
+}
+
+.btn-180 {
+    margin: 10px 0;
+}
+
+.err {
+    color: #ff6166;
+    display: none;
+}

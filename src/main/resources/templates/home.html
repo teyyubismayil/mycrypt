@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <div th:replace="fragments/common :: head"></div>
+    <link rel="stylesheet" th:href="@{/styles/home.css}">
+</head>
+<body>
+<nav th:replace="fragments/common :: nav"></nav>
+<main>
+    <div class="row row-cols-lg-2 row-cols-sm-1">
+        <div class="col align-self-center text-section">
+            <h1>We make security easy.</h1>
+            <p>All the tools you’ll need to secure your files.</p>
+            <a class="btn btn-lg pink-btn btn-180" th:href="@{/tools}" role="button">Explore all tools</a>
+        </div>
+        <div class="col">
+            <img class="home-img" th:src="@{images/home.svg}" alt="home">
+        </div>
+    </div>
+</main>
+<footer th:replace="fragments/common :: footer"></footer>
+</body>
+</html>
