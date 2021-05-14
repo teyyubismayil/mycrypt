@@ -56,7 +56,7 @@ function onDecryptClick(e) {
     }
 }
 
-function decryptAndDownload(f, password) {
+async function decryptAndDownload(f, password) {
     let id;
     let encrypted;
     let fileName;

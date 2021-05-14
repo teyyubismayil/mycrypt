@@ -10,7 +10,7 @@ class EncryptionServiceImpl(
     private val encryptionRepository: EncryptionRepository
 ): EncryptionService {
 
-    override fun find(id: Int): Encryption? {
+    override fun find(id: String): Encryption? {
         return encryptionRepository.findById(id).orElse(null)
     }
 

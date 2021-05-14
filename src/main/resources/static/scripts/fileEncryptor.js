@@ -75,7 +75,7 @@ function onEncryptClick(e) {
     }
 }
 
-function encryptAndDownload(f, password) {
+async function encryptAndDownload(f, password) {
     let content;
     let id;
     readFileAsBaseString(f)

@@ -32,6 +32,6 @@ class EncryptionController(
         val encryption = encryptionService.save(Encryption(user, encryptionRequest, decryptionKey))
         return ResponseEntity
             .ok()
-            .body(EncryptionResponse(encryption.id, encryptionKey))
+            .body(EncryptionResponse(encryption.id.toString(), encryptionKey))
     }
 }

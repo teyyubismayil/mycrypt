@@ -1,6 +1,6 @@
 package com.mycrypt.mycrypt.models
 
 data class EncryptionResponse(
-    val id: Int,
+    val id: String,
     val encryptionKey: EncryptionKey
 )
