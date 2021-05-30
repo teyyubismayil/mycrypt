@@ -1,4 +1,4 @@
-window.onload = (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     const username = document.getElementById('username');
     username.addEventListener('click', onUsernameClick, false);
     if (isLogged()) {
@@ -8,7 +8,7 @@ window.onload = (event) => {
         document.getElementById('comSignInBtn').style.display = 'block';
         document.getElementById('usernameDiv').style.display = 'none';
     }
-}
+});
 
 function isLogged() {
     return getUsername() != null;
