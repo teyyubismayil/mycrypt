@@ -1,4 +1,7 @@
-package com.mycrypt.mycrypt.models
+package com.mycrypt.mycrypt.dtos
+
+import com.mycrypt.mycrypt.models.DecryptionKey
+import com.mycrypt.mycrypt.models.Encryption
 
 data class DecryptionResponse(
     val fileName: String?,

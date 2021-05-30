@@ -2,7 +2,6 @@ package com.mycrypt.mycrypt.services
 
 import com.mycrypt.mycrypt.models.Encryption
 import com.mycrypt.mycrypt.repositories.EncryptionRepository
-import com.mycrypt.mycrypt.repositories.encryptions
 import org.springframework.stereotype.Service
 
 @Service

@@ -34,10 +34,6 @@
     margin: 10px;
 }
 
-.display-none {
-    display: none!important;
-}
-
 .err {
     color: #ff6166;
     display: none;

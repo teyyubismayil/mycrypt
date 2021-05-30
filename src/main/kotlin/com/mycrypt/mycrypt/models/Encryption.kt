@@ -1,5 +1,6 @@
 package com.mycrypt.mycrypt.models
 
+import com.mycrypt.mycrypt.dtos.EncryptionRequest
 import org.bson.types.ObjectId
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
@@ -9,7 +10,7 @@ import java.time.LocalDateTime
 data class Encryption(
     @Id
     val id: ObjectId = ObjectId.get(),
-    val regDate: LocalDateTime? = LocalDateTime.now(),
+    val regDate: LocalDateTime = LocalDateTime.now(),
     val user: User?,
     val password: String?,
     val extension: String?,

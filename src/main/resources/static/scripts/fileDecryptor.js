@@ -33,7 +33,7 @@ function onDrop(e) {
 }
 
 function handleFileInput() {
-    if (file.name.endsWith('.myscript') || file.name.endsWith('.txt')) {
+    if (file.name.endsWith('.mycrypt') || file.name.endsWith('.txt')) {
         document.getElementById('fileWindow').classList.add('display-none');
         document.getElementById('decryptWindow').style.display = 'block';
     }
@@ -63,14 +63,14 @@ async function decryptAndDownload(f, password) {
     let extension;
     readFileAsText(f)
         .then(text => {
-                console.log(text)
+                //console.log(text)
             id = text.substring(0, text.indexOf('.'));
             encrypted = text.substring(text.indexOf('.') + 1, text.length)
             setProgress(20)
             return getKey(id, password)
         })
         .then(res => {
-                console.log(res);
+                //console.log(res);
             fileName = res.fileName;
             extension = res.extension;
             setProgress(40)
@@ -121,7 +121,7 @@ async function getKey(id, password) {
 }
 
 function download(text, extension,  filename) {
-    console.log(extension)
+        //console.log(extension)
     const downloadLink = document.createElement('a');
     downloadLink.href = 'data:' + extension + ';base64,' + text;
     downloadLink.download = filename;
