@@ -1,0 +1,24 @@
+main {
+    padding: 20px;
+}
+
+input {
+    margin-bottom: 5px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.sign-in-window,
+.sign-up-window{
+    margin: 30px;
+    padding: 15px;
+    background-color: rgb(232, 232, 232);
+    border-radius: 10px;
+}
+
+.sign-up-window {
+    display: none;
+}
+

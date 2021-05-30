@@ -5,7 +5,7 @@ window.onload = (event) => {
     const fileWindow = document.getElementById('fileWindow');
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(event => {
         fileWindow.addEventListener(event, preventDefaults, false);
-    })
+    });
     fileWindow.addEventListener('drop', onDrop, false);
     const fileInput = document.getElementById('fileInput');
     fileInput.addEventListener('change', onFileInput, false);
@@ -80,7 +80,7 @@ async function encryptAndDownload(f, password) {
     let id;
     readFileAsBaseString(f)
         .then(baseString => {
-                console.log(baseString)
+                //console.log(baseString)
             const prefixEnd = baseString.indexOf(',');
             const prefix = baseString.substring(0, prefixEnd + 1);
             const extension = prefix.substring(5, prefix.length - 8);
@@ -131,9 +131,9 @@ async function getKey(password, extension, fileName) {
 function generateFileName(fileName) {
     const index = fileName.lastIndexOf('.');
     if (index === -1) {
-        return fileName + ".myscript";
+        return fileName + ".mycrypt";
     }
-    return fileName.substring(0, index) + ".myscript";
+    return fileName.substring(0, index) + ".mycrypt";
 }
 
 function download(text, filename) {

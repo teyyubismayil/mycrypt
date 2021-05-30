@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <div th:replace="fragments/common :: head"></div>
+    <link rel="stylesheet" th:href="@{/styles/login.css}">
+</head>
+<body>
+<nav th:replace="fragments/common :: nav"></nav>
+<main>
+    <div class="h-100 row row-cols-lg-2 row-cols-sm-1">
+        <div class="col">
+            <h1>Welcome to Myscrypt</h1>
+            <p>Some text about accounts</p>
+        </div>
+        <div class="col">
+            <div id="signInWindow" class="sign-in-window">
+                <h2>Sign in with existing account</h2>
+                <label for="usernameIn" class="form-label">Username:</label>
+                <input type="text" class="form-control" id="usernameIn">
+                <label for="passwordIn" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="passwordIn">
+                <div class="d-flex justify-content-between">
+                    <button id="signInBtn" class="btn btn-lg pink-btn btn-180">Sign In</button>
+                    <p class="align-self-end">or <a id="createBtn" href="#">create account</a></p>
+                </div>
+            </div>
+            <div id="signUpWindow" class="sign-up-window">
+                <h3>Not registered yet?</h3>
+                <h2>Create Myscrypt Account</h2>
+                <label for="emailUp" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="emailUp">
+                <label for="usernameUp" class="form-label">Username:</label>
+                <input type="text" class="form-control" id="usernameUp">
+                <label for="passwordUp" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="passwordUp">
+                <label for="passwordConUp" class="form-label">Confirm password:</label>
+                <input type="password" class="form-control" id="passwordConUp">
+                <button id="signUnBtn" class="btn btn-lg pink-btn btn-180">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</main>
+<footer th:replace="fragments/common :: footer"></footer>
+<script th:src="@{/scripts/login.js}"></script>
+</body>
+</html>

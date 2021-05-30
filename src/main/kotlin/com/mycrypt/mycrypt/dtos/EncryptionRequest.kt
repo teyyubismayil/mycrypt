@@ -1,4 +1,4 @@
-package com.mycrypt.mycrypt.models
+package com.mycrypt.mycrypt.dtos
 
 data class EncryptionRequest(
     val password: String?,
